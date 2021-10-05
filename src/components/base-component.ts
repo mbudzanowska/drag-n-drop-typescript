@@ -1,4 +1,4 @@
-export abstract class Component<
+export default abstract class Cmp<
   T extends HTMLElement,
   U extends HTMLElement
 > {
