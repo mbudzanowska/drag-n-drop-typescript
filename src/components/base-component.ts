@@ -1,7 +1,8 @@
-export default abstract class Cmp<
-  T extends HTMLElement,
-  U extends HTMLElement
-> {
+// Component Base Class
+
+export const something = '...';
+
+export default abstract class Component<T extends HTMLElement, U extends HTMLElement> {
   templateElement: HTMLTemplateElement;
   hostElement: T;
   element: U;
@@ -29,9 +30,9 @@ export default abstract class Cmp<
     this.attach(insertAtStart);
   }
 
-  private attach(insertAtStart: boolean) {
+  private attach(insertAtBeginning: boolean) {
     this.hostElement.insertAdjacentElement(
-      insertAtStart ? "afterbegin" : "beforeend",
+      insertAtBeginning ? 'afterbegin' : 'beforeend',
       this.element
     );
   }
